@@ -1,0 +1,1051 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+
+
+
+.hero {
+    position: relative;
+    height: 100vh; /* tinggi penuh layar */
+    background: url('images/air-terjun.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;         /* vertikal tengah */
+    justify-content: flex-start; /* konten di kiri */
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.79) 40%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 60px; /* geser ke kanan 60px dari tepi kiri */
+    text-align: left;
+}
+
+/* Title panjang ke samping */
+.hero-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    max-width: 90%;       /* judul panjang bisa memanjang ke kanan */
+    word-wrap: break-word;
+}
+
+/* Deskripsi paragraf */
+.hero-content p {
+    font-size: 1rem;
+    max-width: 400px;     /* paragraf lebih pendek agar mudah dibaca */
+    line-height: 1.5;
+    margin: 0;
+    
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+        max-width: 90%;
+    }
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    padding: 15px 80px;
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(24, 66, 24, 0.5);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 12px;
+    color: white;
+}
+
+nav {
+    display: flex;             
+    align-items: center;
+    margin-top: -5px;    /* jarak dari elemen di atas */
+    margin-bottom: 10px;
+}
+
+nav a {
+    margin-left: 20px;
+    font-family: 'Times New Roman', serif;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+/* HERO  */
+
+.hero {
+position: relative;
+min-height: 100vh;
+background: 
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    url("bakcg.PNG") center/cover no-repeat;
+
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    position: relative;
+    max-width: 900px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    
+}
+
+/* FEATURES */
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.item i {
+    font-size: 30px;
+}
+
+.item:nth-child(1) i { color: #7ed957; }
+.item:nth-child(2) i { color: #5ac8fa; }
+.item:nth-child(3) i { color: #cddc39; }
+.item:nth-child(4) i { color: #b39ddb; }
+
+
+
+/* ABOUT */
+
+.about {
+    padding: 120px 80px;
+    background: #f5f5f5;
+    text-align: center;
+    
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    
+}
+
+.about p {
+    max-width: 800px;
+    font-family: 'Times New Roman', serif;
+    font-size: 15px;
+    margin: auto;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+
+
+.about {
+    padding: 60px 20px;
+    background-color: #f0f9f4;
+    font-family: 'Poppins', sans-serif;
+    color: #2f4f3f;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1 1 400px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.about-text strong {
+    color: #4caf50; /* highlight kata penting */
+}
+
+.about-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.facility-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.facility-list div {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* ICON */
+.facility-list i {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #0a3322; /* biru bootstrap */
+    display: block;
+}
+
+/* HOVER EFFECT */
+.facility-list div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    background: #f8f9fa;
+}
+
+
+
+/* GALERI */
+
+.gallery-section {
+    font-family: 'Poppins', sans-serif; /* biar konsisten modern */
+    padding: 120px 80px;
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: #2f4f3f;
+    font-family: 'Times New Roman', Times, serif; 
+
+    background: #f5f5f5; /* INI YANG HILANG */
+}
+
+.gallery-section h2 {
+    margin-bottom: 50px;
+}
+
+/* Grid 3 kolom */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+/* Semua card */
+.card {
+    height: 220px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    box-shadow: 0 15px 30px rgba(80, 111, 64, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* CARD foto & video */
+.card img,
+.card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* LOKASI */
+
+.location {
+    padding: 120px 80px;
+    text-align: center;
+    background: #f5f7f4;
+    
+}
+
+/* Judul Lokasi */
+.location h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;       /* ubah sesuai keinginan, misal 2rem */
+    font-weight: bold;
+    color: #2f4f3f;        /* warna gelap agar kontras */
+    text-align: center;    /* bisa juga left jika mau rata kiri */
+    margin-bottom: 25px;   /* jarak dengan paragraf */
+}
+
+/* Container supaya lebih elegan dan bagus */
+.map-container {
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(80, 111, 64, 0.2);
+}
+
+.location-desc p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.6;       /* spasi antar baris nyaman dibaca */
+    color: #333;
+    text-align: justify;    /* rata kiri-kanan */
+    margin-bottom: 20px;    /* jarak bawah jika ada elemen lain */
+}
+
+
+
+/* Map */
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    display: block;
+}
+
+
+
+.facilities {
+    padding: 50px 15px; /* dikurangi sedikit */
+    background-color: #e0f2f1;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #2f4f3f;
+}
+
+.facilities h2 {
+    font-size: 1.8rem; /* kecilkan dari 2.2rem */
+    margin-bottom: 22px;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.facilities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* dikurangi */
+    max-width: 1000px; /* sedikit lebih kecil */
+    margin: 0 auto;
+    
+}
+
+.facility-card {
+    background-color: #ffffff;
+    padding: 20px 15px; /* dikurangi */
+    border-radius: 12px; /* dikurangi */
+    width: 220px; /* lebih kecil */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* lebih ringan */
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.facility-card:hover {
+    transform: translateY(-3px); /* dikurangi */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* lebih ringan */
+}
+
+.facility-card .icon {
+    font-size: 2rem; /* kecilkan dari 2.5rem */
+    margin-bottom: 10px; /* dikurangi */
+}
+
+.facility-card h3 {
+    font-size: 1.05rem; /* kecilkan dari 1.2rem */
+    margin-bottom: 8px;
+    color: #4caf50;
+}
+
+.facility-card p {
+    font-size: 0.85rem; /* lebih kecil */
+    line-height: 1.4; /* rapatkan */
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== HALAMAN PENGUNJUNG ===== */
+
+
+/* BACKGROUND SELURUH HALAMAN */
+body {
+    font-family: 'Times New Roman', Times, serif; 
+    margin: 0;
+    padding: 0;
+    background: url('bakcg.PNG') center/cover no-repeat;
+    background-attachment: fixed; /* agar tidak ikut scroll */
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 80px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* jarak antar input dan tombol */
+    margin-bottom: 30px; /* jarak antara tombol simpan dan daftar pengunjung */
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;  
+}
+
+/* INPUT */
+.container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.container input:focus {
+    border-color: #56eb9e;
+    outline: none;
+    box-shadow: 0 0 5px rgba(204, 203, 208, 0.5);
+}
+
+/* BUTTON */
+.container button {
+    width: 100%;
+    padding: 12px;
+    background: #335e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #b1dcdc;
+}
+
+/* TABLE */
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+}
+
+table th {
+    background: #0d4435;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f1f1f1;
+}
+
+/* LINK KEMBALI */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0a4738;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* FOOTER*/
+
+footer {
+    padding: 10px;
+    background: rgba(24, 66, 24, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 10px; 
+}
+
+
+#harga-tiket {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #2f4f3f;
+  font-family: 'Times New Roman', Times, serif; 
+}
+
+#harga-tiket h2 {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.tiket-card {
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  gap: 20px;
+}
+
+.tiket-img {
+  font-size: 4rem; /* besar emoji */
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+}
+
+.tiket-info {
+  text-align: left;
+}
+
+.tiket-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 17px;
+}
+
+.tiket-info p {
+  margin-bottom: 7px;
+  font-size: 13px;
+  color: #555;
+}
+
+.tiket-info .harga {
+  font-weight: bold;
+  font-size: 15px;
+  color: #4caf50;
+}
+
+
+
+/* LOGIN  */
+/* .login-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.login-modal.active {
+    display: flex;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    animation: slideUp 0.4s ease;
+    color: white;
+}
+
+.login-box h3 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 14px;
+}
+
+.login-box input::placeholder {
+    color: #ddd;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-box button:first-of-type {
+    background: #465f50;
+    color: white;
+}
+
+.login-box button:first-of-type:hover {
+    background: #465f50;
+}
+
+.login-box button:last-of-type {
+    background: #c98e8e;
+    color: white;
+}
+
+.login-box button:last-of-type:hover {
+    background: #b71c1c;
+} */
+
+/* #errorMsg {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #ff7675;
+} */
+
+/* Animations */
+/* @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(40px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+} */
+
+
+/* Container FAQ */
+
+
+
+.faq {
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Judul FAQ */
+.faq h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Setiap item FAQ */
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-left: 5px solid rgba(9, 70, 11, 0.7); /* hijau sedikit transparan */
+    border-radius: 6px;
+    /* Gradasi transparan */
+    background: linear-gradient(
+        135deg,
+        rgb(255, 255, 255) 0%,   /* putih agak tembus */
+        rgb(182, 241, 205) 100%  /* hijau muda tembus */
+    );
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Judul pertanyaan */
+.faq-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Jawaban FAQ */
+.faq-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   RESPONSIVE - TABLET & HP
+   ============================================ */
+
+/* Tablet (max 768px) */
+@media (max-width: 768px) {
+
+    /* NAVBAR - logo tidak patah */
+    header {
+        padding: 10px 16px;
+        height: auto;
+    }
+
+    .logo {
+        font-size: 11px;
+        white-space: nowrap;
+        max-width: 100px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 11px;
+    }
+
+    /* HERO */
+    .hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        max-width: 100%;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    /* FASILITAS */
+    .facilities {
+        padding: 50px 16px;
+    }
+
+    .facilities-container {
+        gap: 14px;
+    }
+
+    .facility-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px 16px;
+    }
+
+    /* GALERI - fix foto jadi portrait */
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        height: 180px;
+    }
+
+    /* HARGA TIKET */
+    .tiket-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* LOKASI */
+    .location {
+        padding: 60px 20px;
+    }
+
+    .location-container {
+        flex-direction: column;
+    }
+
+    .location-map iframe {
+        height: 280px;
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 0 16px;
+        margin: 40px auto;
+    }
+}
+
+/* HP kecil (max 480px) */
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+    header {
+        padding: 8px 12px;
+    }
+
+    .logo {
+        font-size: 10px;
+        max-width: 85px;
+    }
+
+    nav a {
+        margin-left: 6px;
+        font-size: 10px;
+    }
+
+    /* HERO */
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    /* GALERI - 1 kolom di HP kecil */
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        height: 220px;
+    }
+
+    /* CONTAINER PENGUNJUNG */
+    .container {
+        margin: 70px 12px 40px;
+        padding: 30px 20px;
+    }
+
+    /* LOKASI */
+    .map-container iframe,
+    .location-map iframe {
+        height: 220px;
+    }
+}
+
+
+/* TOAST NOTIFIKASI */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    min-width: 250px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.success { background-color: #4caf50; }
+.toast.error { background-color: #f44336; }
+
+.toast .close-btn {
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Section Lokasi */
+.location {
+    padding: 50px 20px;
+    background-color: #e8f5e9;
+    font-family: 'Poppins', sans-serif;
+    color: #2f4f3f;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.location h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.location-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.location-desc {
+    flex: 1 1 400px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.location-desc p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 13px;
+    
+}
+
+.location-map {
+    flex: 1 1 400px;
+}
